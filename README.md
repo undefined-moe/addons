@@ -3,7 +3,6 @@
 这里是四季酱扩展仓库。你向这里提交的代码**将直接被四季酱执行**并作为其功能的一部分。允许扩展的功能包括：
 
 - 指令
-- 中间件
 - 全局方法
 
 ## 提交流程
@@ -18,16 +17,10 @@
 下面是一个简单的例子：
 
 ```ts
-import { middleware, command } from 'shiki'
+import { command } from 'shiki'
 
 command('foo', ({ session }) => {
   // 懒得编了，看着办吧
-})
-
-middleware((session, next) => {
-  if (session.message === '天王盖地虎') {
-    return send('宝塔镇河妖')
-  }
 })
 
 export function hello() {
@@ -61,7 +54,7 @@ commands:
 root
 └ my-addon
   ├ index.ts
-  └ manifest.json
+  └ manifest.yml
 ```
 
 ## API
