@@ -12,15 +12,15 @@ interface DamageOptions {
   fix?: number
 }
 
-export function getHp ({ species = 100, iv = 31, base = 252, level = 50 }: Stat) {
+export function getHp({ species = 100, iv = 31, base = 252, level = 50 }: Stat) {
   return Math.floor((species * 2 + iv + base / 4) * level / 100 + 10 + level)
 }
 
-export function getStat ({ species = 100, iv = 31, base = 252, level = 50, fix = 1 }: Stat) {
+export function getStat({ species = 100, iv = 31, base = 252, level = 50, fix = 1 }: Stat) {
   return Math.floor(((species * 2 + iv + base / 4) * level / 100 + 5) * fix)
 }
 
-export function calcDamage (power: number, attacker: { atk: Stat, level?: number }, defender: { hp: Stat, dfs: Stat, level?: number }, { stab, rel, fix }: DamageOptions = {}) {
+export function calcDamage(power: number, attacker: { atk: Stat, level?: number }, defender: { hp: Stat, dfs: Stat, level?: number }, { stab, rel, fix }: DamageOptions = {}) {
   attacker.level = attacker.level || 50
   defender.level = defender.level || 50
 
