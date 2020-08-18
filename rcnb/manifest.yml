@@ -3,6 +3,7 @@ version: 0.1
 commands:
   - name: rcnb [message...]
     desc: 神秘解码器
+    authority: 2
     options:
       - name: encode
         desc: -e  编码模式

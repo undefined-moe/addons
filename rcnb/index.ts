@@ -94,7 +94,7 @@ export function decode(str: string) {
   return Uint8Array.from(arr)
 }
 
-registerCommand('rcnb', ({ options, args }) => {
+registerCommand('rcnb', ({ options, args, exec }) => {
   if (options.encode) {
     return encode(new TextEncoder().encode(args[0]))
   } else if (options.decode) {
