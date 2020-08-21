@@ -1,0 +1,5 @@
+version: 0.1
+
+commands:
+  - name: eat [item]
+    desc: 向四季酱投食
