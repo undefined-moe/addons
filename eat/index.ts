@@ -40,7 +40,9 @@ const answers = [{
 
 registerCommand('eat', ({ args, user }) => {
   const name = args.join(' ')
-  if (name.match(/\[cq:at,qq=\d+\]/ig)) {
+  if (!name) {
+    return '请输入要喂食的物品名。'
+  } else if (name.match(/\[cq:at,qq=\d+\]/ig)) {
     return '仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德仁义道德'
   } else if (name.length > 50) {
     return '这什么鬼东西啊，名字那么长，总感觉有毒，要不你先吃一个?我6个小时后来看看你是否还活着。。。'
