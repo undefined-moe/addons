@@ -3,8 +3,6 @@ import answers from './NormalAnswer'
 import specialAnswers from './SpecialAnswer'
 import { Answer } from './types'
 
-const dontEat = ["树根"]
-
 registerCommand('eat', ({ args, user }) => {
   const name = args.join(' ')
   if (!name) {

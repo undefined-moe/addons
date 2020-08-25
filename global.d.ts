@@ -1,6 +1,7 @@
 declare module 'koishi' {
   interface User {
     name: string
+    id: number
   }
 
   interface Argv {
