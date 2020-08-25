@@ -1,4 +1,4 @@
-declare module 'koishi' {
+declare module 'koishi/addons' {
   interface User {
     name: string
     id: number

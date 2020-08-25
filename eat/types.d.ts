@@ -1,4 +1,4 @@
-import { User } from "koishi"
+import { User } from 'koishi/addons'
 
 export type Answer = {
   text: string | textGenerator | string[]

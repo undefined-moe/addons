@@ -1,5 +1,5 @@
 import { SpecialItem } from './types'
-import { User } from 'koishi'
+import { User } from 'koishi/addons'
 const sa: SpecialItem[] = [
   {
     name: '仁义道德',

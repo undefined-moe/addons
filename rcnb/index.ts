@@ -1,6 +1,6 @@
 // modified from https://github.com/rcnbapp/RCNB.js/blob/master/rcnb.js
 
-import { registerCommand } from 'koishi'
+import { registerCommand } from 'koishi/addons'
 
 const cr = 'rRŔŕŖŗŘřƦȐȑȒȓɌɍ'
 const cc = 'cCĆćĈĉĊċČčƇƈÇȻȼ'

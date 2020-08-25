@@ -1,4 +1,4 @@
-import { registerCommand, User } from 'koishi'
+import { registerCommand, User } from 'koishi/addons'
 import answers from './NormalAnswer'
 import specialAnswers from './SpecialAnswer'
 import { Answer } from './types'
