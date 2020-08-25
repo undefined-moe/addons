@@ -48,10 +48,16 @@ const sa: SpecialItem[] = [
     name: '荭茶',
     answers: [{
       text: '正当你把荭茶放到餐桌上时，四季酱把你丢了出去。',
-      probability: 0.3,
+      probability: 0.15,
     }, {
       text: '四季酱不忍心吃掉荭茶，把你和荭茶换了个位置。。。',
-      probability: 0.4,
+      probability: 0.2,
+    }, {
+      text: '四季酱把 %user% 榨成了汁，装进了奶茶杯里面，递给了荭茶。。。',
+      probability: 0.2,
+    }, {
+      text: '四季酱看到荭茶躺在餐桌上一动不动的样子，顿时对你起了杀心。。。',
+      probability: 0.15,
     }, {
       text(user: User) {
         if (user.id === 312533284) {
