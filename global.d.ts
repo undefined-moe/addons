@@ -1,7 +1,9 @@
 declare module 'koishi/addons' {
   interface User {
-    name?: string
-    id?: number
+    id: number
+    name: string
+    lucky: number
+    affinity: number
   }
 
   interface Argv {

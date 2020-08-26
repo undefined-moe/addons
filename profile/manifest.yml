@@ -1,0 +1,9 @@
+version: 0.1
+
+commands:
+  - name: income
+    desc: 期望收益计算
+    userFields:
+    - name
+    - lucky
+    - affinity
