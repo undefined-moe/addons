@@ -1,7 +1,7 @@
 declare module 'koishi/addons' {
   interface User {
-    name: string
-    id: number
+    name?: string
+    id?: number
   }
 
   interface Argv {
@@ -13,4 +13,10 @@ declare module 'koishi/addons' {
   }
 
   export function registerCommand(name: string, callback: (argv: Argv) => void | string | Promise<void | string>): void
+}
+
+declare module 'koishi/utils' {
+  import { Time, Random, CQCode } from 'koishi-utils'
+
+  export { Time, Random, CQCode }
 }
