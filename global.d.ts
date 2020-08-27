@@ -4,6 +4,7 @@ declare module 'koishi/addons' {
     name: string
     lucky: number
     affinity: number
+    _update(): Promise<void>
   }
 
   interface Argv {
