@@ -2,7 +2,7 @@ import { User } from 'koishi/addons'
 import { Random } from 'koishi/utils'
 import { SpecialItem } from './types'
 
-export default [{
+const sa: SpecialItem[] = [{
   name: '仁义道德',
   answers: [{
     text: '别吃书了，快写文',
@@ -68,4 +68,31 @@ export default [{
     },
     probability: 0.3,
   }],
-}] as SpecialItem[]
+}, {
+  name: '鱼竿',
+  answers: [{
+    text: ['啊，有鱼上钩了！', 'emmm', '怎么是 %user% 这个笨蛋啊！'],
+    probability: 1
+  }]
+}, {
+  name: '孤梦星影',
+  alias: ['孤梦', '孤宝', '梦梦奈', '梦梦'],
+  answers: [{
+    text(user: User, item: string) {
+      return item + '是什么？能吃吗？'
+    },
+    probability: 0.1
+  }, {
+    text: ['咕梦？不吃不吃，吃了会成鸽子的。。'],
+    probability: 0.1
+  }, {
+    text: ['不！我拒绝！我才不吃孤梦星影，怎么能够噬主呢？'],
+    probability: 0.5
+  }, {
+    text: ['孤梦真好吃！现在我就是我自己的主人了！'],
+    probability: 0.3
+  }]
+}
+]
+
+export default sa

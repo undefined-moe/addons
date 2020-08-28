@@ -6,8 +6,9 @@ export type Answer = {
 }
 
 export type SpecialItem = {
-  name: string,
+  name: string
+  alias?: string[]
   answers: Answer[]
 }
 
-export type textGenerator = (user: User) => string | string[]
+export type textGenerator = (user: User, item: string) => string | string[]
