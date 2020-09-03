@@ -1,0 +1,5 @@
+version: 0.1
+
+commands:
+  - name: '[CQ:face,id=107] [message...]'
+    desc: [CQ:face,id=107]
