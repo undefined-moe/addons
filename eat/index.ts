@@ -31,7 +31,7 @@ registerCommand('eat', ({ args, user, send, group }) => {
         send(e)
       })
     } else {
-      send(answer)
+      return send(answer)
     }
   }
 
