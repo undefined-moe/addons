@@ -71,9 +71,9 @@ registerCommand('foodlevel', ({ send, group }) => {
   let CurrentFoodLevel: FoodLevel = foodLevel[group.id || "0"]
   calcFoodLevel(CurrentFoodLevel)
   if (CurrentFoodLevel.lock) {
-    return send('四季酱已经吃饱了哦！让她慢慢消化一下吧！')
+    return send('四季酱小肚子鼓鼓的！让她慢慢消化一下吧！')
   } else if (CurrentFoodLevel.level <= 30) {
-    return send('四季酱要饿死了！快给我东西吃！')
+    return send('四季酱要肚皮都要贴到后背去了！快给四季酱东西吃！')
   } else {
     return send('四季酱现在吃了' + 中文[Math.floor(CurrentFoodLevel.level / 10) - 1] + '分饱，还能再吃点')
   }
