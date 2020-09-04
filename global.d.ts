@@ -8,10 +8,15 @@ declare module 'koishi/addons' {
     _update(): Promise<void>
   }
 
+  interface Group {
+    id: number
+  }
+
   interface Argv {
     user: User
     options: Record<string, any>
     args: string[]
+    group: Group
     send(...args: any[]): Promise<void>
     exec(message: string): Promise<void>
   }

@@ -5,3 +5,5 @@ commands:
     desc: 向四季酱投食
     userFields:
     - name
+    groupFields:
+    - id
