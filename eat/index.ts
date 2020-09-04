@@ -8,6 +8,8 @@ import { fa } from './FullAnswer'
 
 const foodLevel: { [key: number]: FoodLevel } = {}
 
+const 中文 = "一二三四五六七八九十".split("")
+
 registerCommand('eat', ({ args, user, send, group }) => {
   const item = args.join(' ')
   if (!item) {
@@ -56,6 +58,26 @@ registerCommand('eat', ({ args, user, send, group }) => {
       send(answer)
     }
   }
+})
+
+registerCommand('foodlevel', ({ send, group }) => {
+  if (typeof foodLevel[group.id || "0"] !== "object") {
+    foodLevel[group.id || "0"] = {
+      level: 0,
+      last: Date.now(),
+      lock: false
+    }
+  }
+  let CurrentFoodLevel: FoodLevel = foodLevel[group.id || "0"]
+  calcFoodLevel(CurrentFoodLevel)
+  if (CurrentFoodLevel.lock) {
+    return send('四季酱已经吃饱了哦！让她慢慢消化一下吧！')
+  } else if (CurrentFoodLevel.level <= 30) {
+    return send('四季酱要饿死了！快给我东西吃！')
+  } else {
+    return send('四季酱现在吃了' + 中文[Math.floor(CurrentFoodLevel.level / 10) - 1] + '分饱，还能再吃点')
+  }
+  return
 })
 
 function getAnswer(answers: Answer[], item: string, user: User, foodLevel: FoodLevel) {

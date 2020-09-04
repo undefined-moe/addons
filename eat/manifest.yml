@@ -7,3 +7,7 @@ commands:
     - name
     groupFields:
     - id
+  - name: foodlevel
+    desc: 摸摸四季酱的肚子
+    groupFields:
+    - id
