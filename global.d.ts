@@ -4,6 +4,7 @@ declare module 'koishi/addons' {
     name: string
     lucky: number
     affinity: number
+    warehouse: Record<string, number>
     _update(): Promise<void>
   }
 
