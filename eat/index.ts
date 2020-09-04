@@ -69,7 +69,7 @@ function getAnswer(answers: Answer[], item: string, user: User, foodLevel: FoodL
     pointer += (answer.probability || 1)
     if (target < pointer) {
       if (answer.eat) {
-        foodLevel.level = Math.min(Math.random() * 5 + foodLevel.level, 100)
+        foodLevel.level = Math.min(Math.random() * 10 + foodLevel.level, 100)
         foodLevel.last = Date.now()
         if (foodLevel.level > 95) {
           foodLevel.lock = true
