@@ -34,6 +34,8 @@ declare module 'shiki' {
   export enum rarities { N, R, SR, SSR, EX, SP }
   export type Rarity = keyof typeof rarities
 
+  type Event = null
+
   export interface Item {
     name: string
     rarity: Rarity

@@ -98,14 +98,14 @@ function getAnswer(answers: Answer[], item: string, user: User, foodLevel: FoodL
         }
       }
       switch (typeof answer.text) {
-        case 'function':
-          return answer.text(user, item)
-        case 'string':
-          return answer.text.replace(/\%user\%/g, user.name).replace(/\%name\%/g, item)
-        default:
-          return answer.text.map((e) => {
-            return e.replace(/\%user\%/g, user.name).replace(/\%name\%/g, item)
-          })
+      case 'function':
+        return answer.text(user, item)
+      case 'string':
+        return answer.text.replace(/\%user\%/g, user.name).replace(/\%name\%/g, item)
+      default:
+        return answer.text.map((e) => {
+          return e.replace(/\%user\%/g, user.name).replace(/\%name\%/g, item)
+        })
       }
     }
   }

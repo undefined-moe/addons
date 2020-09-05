@@ -8,19 +8,44 @@ settings:
 
 env:
   es2020: true
+  node: true
 
 plugins:
   - '@typescript-eslint'
 
 rules:
+  block-spacing: error
+  brace-style:
+    - error
+    - 1tbs
+    - allowSingleLine: true
+  camelcase: error
   comma-dangle:
     - error
     - always-multiline
+  comma-style: error
+  curly:
+    - error
+    - multi-line
+  dot-location:
+    - error
+    - property
+  eol-last: error
+  indent:
+    - error
+    - 2
+  no-multiple-empty-lines: error
+  no-undef: error
+  operator-linebreak:
+    - error
+    - before
   quotes:
     - error
     - single
     - avoidEscape: true
       allowTemplateLiterals: true
+  space-infix-ops: error
+  '@typescript-eslint/comma-spacing': error
   '@typescript-eslint/keyword-spacing': error
   '@typescript-eslint/no-unused-vars': error
   '@typescript-eslint/space-before-function-paren':
