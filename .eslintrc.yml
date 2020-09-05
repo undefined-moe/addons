@@ -1,0 +1,31 @@
+root: true
+
+parser: '@typescript-eslint/parser'
+
+settings:
+  import/parsers:
+    '@typescript-eslint/parser': ['.ts']
+
+env:
+  es2020: true
+
+plugins:
+  - '@typescript-eslint'
+
+rules:
+  comma-dangle:
+    - error
+    - always-multiline
+  quotes:
+    - error
+    - single
+    - avoidEscape: true
+      allowTemplateLiterals: true
+  '@typescript-eslint/keyword-spacing': error
+  '@typescript-eslint/no-unused-vars': error
+  '@typescript-eslint/space-before-function-paren':
+    - error
+    - anonymous: always
+      asyncArrow: always
+      named: never
+  '@typescript-eslint/type-annotation-spacing': error

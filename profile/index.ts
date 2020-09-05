@@ -10,7 +10,7 @@ function getProb(prob: number, lucky: number, base = DEFAULT_BASE) {
 
 function getWeightedProb<T extends string>(weights: Readonly<Record<T, number>>, lucky: number, scale = 1) {
   const entries = Object.entries<number>(weights)
-  const total = entries.reduce((prev, [_, curr]) => prev + curr, 0)
+  const total = entries.reduce((prev, [, curr]) => prev + curr, 0)
   let pointer = 0, lastProb = 0
   return entries.map(([key, value]) => {
     pointer += value

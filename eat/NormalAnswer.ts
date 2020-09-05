@@ -1,13 +1,13 @@
-import { Answer } from "./types";
+import { Answer } from './types';
 
 const na: Answer[] = [{
   text: '四季酱一口吃掉了%name%',
   probability: 0.1,
-  eat: true
+  eat: true,
 }, {
   text: '四季酱拒绝投食，并从你身上撕咬下了一大块肉。%user%死得不能再死了，12 小时之内无法与四季酱交互了！',
   probability: 0.1,
-  eat: false
+  eat: false,
 }, {
   text: '四季酱端起%name%闻了闻，%name%独特的香味让人食欲大增，从中间切开来，饱满的汁水流了出来。四季酱看了你一眼，把一整盘%name%扫到了自己碗里，抱着碗跑到了角落里慢慢品了起来。。。',
   probability: 0.1,
@@ -47,6 +47,6 @@ const na: Answer[] = [{
 }, {
   text: '在这个时代，每一个人都经历了太多的苦痛和喜悦，幻想乡的人们总会将苦涩藏在心里，而把幸福变成食物，呈现在四季的餐桌之上。今天这一道%name%，集齐了大自然的馈赠，蕴含了%user%的智慧，表达了对四季酱浓浓的爱意。然而四季酱不想吃！并掏出了40米长的大刀',
   probability: 0.1,
-  eat: false
+  eat: false,
 }]
 export default na
