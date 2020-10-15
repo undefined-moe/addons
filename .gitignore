@@ -1,5 +1,6 @@
 dist
 temp
+.koishi
 
 node_modules/
 npm-debug.log

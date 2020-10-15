@@ -17,9 +17,9 @@
 下面是一个简单的例子：
 
 ```ts
-import { command } from 'shiki'
+import { registerCommand } from 'koishi/addons'
 
-command('foo', ({ session }) => {
+registerCommand('foo', ({ args }) => {
   // 懒得编了，看着办吧
 })
 
@@ -34,9 +34,6 @@ export function hello() {
 
 ```yml
 version: 1
-export: true
-groups:
-  - 123456789
 commands:
   - name: foo
     desc: 一个我也不知道有啥用的指令
@@ -57,11 +54,17 @@ root
   └ manifest.yml
 ```
 
-## API
+## koishi/addons
 
-### command
+### registerCommand
 
-### middleware
+## koishi/utils
+
+### Random
+
+### Time
+
+### CQCode
 
 ## 配置项
 
